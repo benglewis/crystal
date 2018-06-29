@@ -19,7 +19,7 @@ jobs:
       - run: |
           git clone https://github.com/crystal-lang/distribution-scripts.git ~/distribution-scripts
           cd ~/distribution-scripts
-          git checkout 359e4ddb8fa22a5313d8b3e8c654af0d23a061b8
+          git checkout dd1c0caad8dfe628c2b559ebd08b6f0a8d423b1d
       # persist relevant information for build process
       - run: |
           cd ~/distribution-scripts
@@ -46,8 +46,6 @@ jobs:
   dist_darwin:
     macos:
       xcode: "9.0"
-    environment:
-      MACOSX_DEPLOYMENT_TARGET: 10.11
     shell: /bin/bash --login -eo pipefail
     steps:
       - run:
